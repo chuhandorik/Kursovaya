@@ -27,7 +27,7 @@ class Note(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
     )
-
+    
     def __str__(self):
         return self.title
 

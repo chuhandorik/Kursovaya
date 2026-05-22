@@ -4,7 +4,7 @@
   <ul>
     {% for note in object_list %}
       <li>
-        {{ note.id }}:
+        {{ forloop.counter }}:
         <a href="{% url 'notes:detail' note.slug %}"> {{ note.title }}</a>
       </li>
     {% endfor %}
