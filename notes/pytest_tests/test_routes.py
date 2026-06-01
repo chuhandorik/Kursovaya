@@ -19,7 +19,7 @@ def test_pages_availability_for_anonymous_user(client, name):
     if name == 'users:logout':
         # logout в Django 5 вызывается POST-запросом
         response = client.post(url)
-        assert response.status_code == HTTPStatus.FOUND
+        assert response.status_code == HTTPStatus.OK
     else:
         response = client.get(url)  # Выполняем запрос.
         assert response.status_code == HTTPStatus.OK
